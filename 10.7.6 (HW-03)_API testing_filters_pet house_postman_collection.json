@@ -1,0 +1,1221 @@
+{
+	"info": {
+		"_postman_id": "26460d78-9c77-48d3-b414-9ef0e631c941",
+		"name": "Практическое задание 10.7.6 (HW-03) -  фильтры_Дом Питомца",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34256235"
+	},
+	"item": [
+		{
+			"name": "gender=m_species=кошка_age=2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&species__name=%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&gender__code=m&age=2",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "species__name",
+							"value": "%D0%BA%D0%BE%D1%88%D0%BA%D0%B0"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_species=кошка",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&species__name=%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&gender__code=m",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "species__name",
+							"value": "%D0%BA%D0%BE%D1%88%D0%BA%D0%B0"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_breed=cockatiel_age=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=cockatiel&gender__code=m&age=1",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "cockatiel"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_breed=german_shepherd_age=0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=german_shepherd&gender__code=m&age=0",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "german_shepherd"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_breed=german_shepherd",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=german_shepherd&gender__code=m",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "german_shepherd"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_age=0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&gender__code=m&age=0",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_age=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&gender__code=m&age=1",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m_age=2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&gender__code=m&age=2",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gender=m",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&gender__code=m",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "gender__code",
+							"value": "m"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "species=кошка_age=2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&species__name=%D0%BA%D0%BE%D1%88%D0%BA%D0%B0&age=2",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "species__name",
+							"value": "%D0%BA%D0%BE%D1%88%D0%BA%D0%B0"
+						},
+						{
+							"key": "age",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "species=кошка",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&species__name=%D0%BA%D0%BE%D1%88%D0%BA%D0%B0",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "species__name",
+							"value": "%D0%BA%D0%BE%D1%88%D0%BA%D0%B0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "breed=cockatiel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=cockatiel",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "cockatiel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "breed=german_shepherd",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=german_shepherd",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "german_shepherd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "breed=german_shepherd_age-0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=german_shepherd&age=0",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "german_shepherd"
+						},
+						{
+							"key": "age",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "breed=cockatiel_age-1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Allow",
+						"value": "GET, POST, HEAD, OPTIONS",
+						"type": "text"
+					},
+					{
+						"key": "Server",
+						"value": "nginx/1.14.0 (Ubuntu)",
+						"type": "text"
+					},
+					{
+						"key": "Vary",
+						"value": "Accept",
+						"type": "text"
+					},
+					{
+						"key": "X-Frame-Options",
+						"value": "SAMEORIGIN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://158.160.56.133/api/pet/?page=1&page_size=6&breed__code=cockatiel&age=1",
+					"protocol": "http",
+					"host": [
+						"158",
+						"160",
+						"56",
+						"133"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						},
+						{
+							"key": "breed__code",
+							"value": "cockatiel"
+						},
+						{
+							"key": "age",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
